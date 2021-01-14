@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark" >
+    <ion-title>
+      GifsWorld <img class="fitMe" src="assets/icon/gif.png" alt="">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="warning">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-searchbar (ionChange)=_ionChange($event)></ion-searchbar>
+  <div class="images">
+    <div class="one-image" *ngFor="let result of results">
+      <img [src]="result?.images.downsized.url" alt="">
+    </div>
+  </div>
+
+</ion-content>
